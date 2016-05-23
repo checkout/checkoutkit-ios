@@ -15,7 +15,6 @@
 @property (nonatomic, assign) BOOL liveMode;
 @property (nonatomic, retain) NSString *created;
 @property (nonatomic, assign) BOOL used;
-@property (nonatomic, retain) Card *card;
 
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary;
 

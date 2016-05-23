@@ -17,7 +17,6 @@ public class CardTokenResponse: Serializable {
     public var liveMode: Bool!
     public var created: String!
     public var used: Bool!
-    public var card: CardToken!
     
     /**
     Default constructor
@@ -34,12 +33,11 @@ public class CardTokenResponse: Serializable {
     
     */
     
-    public init(cardToken: String, liveMode: Bool, created: String, used: Bool, card: CardToken) {
+    public init(cardToken: String, liveMode: Bool, created: String, used: Bool) {
         self.cardToken = cardToken
         self.liveMode = liveMode
         self.created = created
         self.used = used
-        self.card = card
     }
     
     /**
@@ -54,19 +52,11 @@ public class CardTokenResponse: Serializable {
         if let ct = data["id"] as? String,
             created = data["created"] as? String,
             lm = data["liveMode"] as? Bool,
-            used = data["used"] as? Bool,
-            card = data["card"] as? [String: AnyObject] {
-                
+            used = data["used"] as? Bool {
                 self.cardToken = ct
                 self.created = created
                 self.liveMode = lm
                 self.used = used
-                let c = CardToken(data: card)
-                if c == nil {
-                    return nil
-                } else {
-                    self.card = c!
-                }
         } else {
             return nil
         }
