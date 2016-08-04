@@ -141,6 +141,7 @@ class HTTPConnector {
         
         request.addValue(pk, forHTTPHeaderField: "AUTHORIZATION")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("MobileKit.iOS.ObjectiveC", forHTTPHeaderField: "Client-Id")
         
         request.HTTPBody = payload.dataUsingEncoding(NSUTF8StringEncoding)
         
