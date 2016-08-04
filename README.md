@@ -134,6 +134,7 @@ Set the customer details to the card:
 [checkoutKitInstance createCardToken:card success:^(CardTokenResponse *responseDict){
         
     NSLog(@"%@",responseDict.cardToken);
+    NSLog(@"%@", responseDict.card);
         
     } failure:^(NSError *error) {
     NSLog(@"%@", [error valueForKey:@"errors"]);

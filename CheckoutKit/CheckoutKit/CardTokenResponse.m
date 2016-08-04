@@ -17,6 +17,7 @@
         self.created = dictionary[@"created"];
         self.liveMode = dictionary[@"liveMode"];
         self.used = dictionary[@"used"];
+        self.card = dictionary[@"card"];
     }
     return self;
 }
