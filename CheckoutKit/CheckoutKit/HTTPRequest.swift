@@ -141,6 +141,7 @@ class HTTPConnector {
         
         request.addValue(pk, forHTTPHeaderField: "AUTHORIZATION")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("MobileKit.iOS", forHTTPHeaderField: "Client-Id")
         
         request.HTTPBody = payload.dataUsingEncoding(NSUTF8StringEncoding)
         
@@ -154,7 +155,6 @@ class HTTPConnector {
         let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
             if error != nil {
                 self.handler(data: NSData(), status: -1, error: true)
-                self.log.info("HEEEEEEEEEELLLO")
                 self.log.error(error!.description)
             } else {
                 let httpResponse = response as? NSHTTPURLResponse
