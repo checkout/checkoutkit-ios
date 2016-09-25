@@ -72,7 +72,8 @@ static CheckoutKitObjC *sharedCheckoutKit = nil;
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     sessionConfiguration.HTTPAdditionalHeaders = @{
                                                    @"Content-Type"       : @"application/json",
-                                                   @"AUTHORIZATION"      : publicKey
+                                                   @"AUTHORIZATION"      : publicKey,
+                                                   @"Client-Id"          : @"MobileKit.iOS.ObjectiveC"
                                                    };
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
     NSURL *url = [NSURL URLWithString:[environment stringByAppendingString:@"tokens/card"]];
@@ -122,7 +123,8 @@ static CheckoutKitObjC *sharedCheckoutKit = nil;
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     sessionConfiguration.HTTPAdditionalHeaders = @{
                                                    @"Content-Type"       : @"application/json",
-                                                   @"AUTHORIZATION"      : publicKey
+                                                   @"AUTHORIZATION"      : publicKey,
+                                                   @"Client-Id"          : @"MobileKit.iOS.ObjectiveC"
                                                    };
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
     NSURL *url = [NSURL URLWithString:[environment stringByAppendingString:@"providers/cards"]];

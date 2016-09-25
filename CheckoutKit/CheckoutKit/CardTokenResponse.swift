@@ -56,7 +56,6 @@ public class CardTokenResponse: Serializable {
             lm = data["liveMode"] as? Bool,
             used = data["used"] as? Bool,
             card = data["card"] as? [String: AnyObject] {
-                
                 self.cardToken = ct
                 self.created = created
                 self.liveMode = lm
