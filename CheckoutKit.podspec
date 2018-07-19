@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/checkout/checkoutkit-ios', :branch => 'master' }
 
   s.ios.deployment_target = '8.0'
-  
+  s.swift_version = "4.0"
   s.source_files = 'CheckoutKit/**/*.{swift,h,m}'
   s.exclude_files = 'CheckoutKit/CheckoutKitTests/**'
 end
