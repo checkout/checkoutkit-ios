@@ -108,8 +108,9 @@ static CheckoutKitObjC *sharedCheckoutKit = nil;
             failure(error);
         }
         
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        });
     }];
     [postDataTask resume];
 }
@@ -154,8 +155,9 @@ static CheckoutKitObjC *sharedCheckoutKit = nil;
         } else {
             failure(error);
         }
-        
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        });
         
     }];
     [getDataTask resume];
