@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'CheckoutKit'
-  s.version = '3.0.5'
+  s.version = '3.0.6'
   s.license = 'MIT'
   s.summary = 'iOS version of Checkout Kit that implements Card Tokenisation'
   s.homepage = 'https://checkout.com'
