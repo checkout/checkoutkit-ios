@@ -23,6 +23,13 @@ xcodeproj 'path/to/proj.xcodeproj'
 
 Then run ```pod install``` and the framework is ready to be used.
 
+__Carthage__
+
+To integrate the framework into your Xcode project using Carthage, specify it in your ```Cartfile```:
+```
+github "checkout/checkoutkit-ios" ~> 3.0.6
+```
+
 __Manually__
 
 Otherwise, the framework source code can be downloaded and manually added in your Xcode workspace.
