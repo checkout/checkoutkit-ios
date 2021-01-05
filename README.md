@@ -1,3 +1,5 @@
+> :warning: This mobile SDK is built on top of Checkout.com's Classic API and is not actively maintained. Please refer to our [Frames iOS SDK](https://github.com/checkout/frames-ios/) instead.
+
 ### Requirements
 
 Swift 3, iOS 8.0 and later
