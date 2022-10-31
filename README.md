@@ -1,4 +1,4 @@
-> :warning: We're ending support for these SDKs on 28th April 2023. You should upgrade to the newest versions of our [Frames iOS SDK](https://github.com/checkout/frames-ios/), and release a new version of your application with these SDKs by that date. We would recommend starting this process ASAP. 
+> :warning: ***We're ending support for these SDKs on 28th April 2023. You should upgrade to the newest versions of our [Frames iOS SDK](https://github.com/checkout/frames-ios/), and release a new version of your application with these SDKs by that date. We would recommend starting this process ASAP.*** :warning:
 
 ### Requirements
 
